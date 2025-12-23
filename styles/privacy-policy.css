@@ -1,0 +1,55 @@
+/* Simple, clean styling for the privacy policy page */
+:root{
+  --max-width:900px;
+  --accent:#0b5cff;
+  --muted:#6b7280;
+  --bg:#fbfdff;
+  --paper:#ffffff;
+  --radius:8px;
+  --gap:20px;
+}
+*{box-sizing:border-box}
+body{
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg, var(--bg), #f6f9ff);
+  color:#0b1220;
+  line-height:1.6;
+  margin:0;
+  padding:40px 20px;
+}
+.container{
+  max-width:var(--max-width);
+  margin:0 auto;
+  background:var(--paper);
+  border-radius:var(--radius);
+  box-shadow:0 6px 30px rgba(11,17,32,0.08);
+  padding:28px;
+}
+.header h1{margin:0 0 8px 0;font-size:20px}
+.meta{color:var(--muted);margin:0 0 6px 0}
+.meta.small{font-size:13px}
+.toc{background:#f8fbff;padding:14px;border-radius:8px;margin:18px 0}
+.toc h2{margin:0 0 8px 0;font-size:16px}
+.toc ol{padding-left:18px;margin:0}
+.toc a{color:var(--accent);text-decoration:none}
+.policy{margin:18px 0;padding-bottom:6px;border-bottom:1px solid #eef2ff}
+.policy h2{font-size:16px;margin:6px 0}
+.policy h3{font-size:15px;margin:8px 0}
+ul,ol{margin:8px 0 12px 20px}
+li{margin:6px 0}
+.footer{text-align:center;color:var(--muted);font-size:13px;padding-top:12px}
+.small{font-size:12px}
+
+/* Responsive */
+@media (max-width:640px){
+  body{padding:18px}
+  .container{padding:18px}
+  .toc{font-size:14px}
+}
+
+/* Print-friendly */
+@media print{
+  body{background:white;padding:0}
+  .container{box-shadow:none;border-radius:0}
+  .toc{page-break-inside:avoid}
+}
